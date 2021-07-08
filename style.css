@@ -8,224 +8,217 @@
  }
  
  html {
-     font-size: 18px;
-     line-height: 1.2;
-   }
-
-     @media (max-width: 600px) {
-
-     html {
-     font-size: 14px;
-     
-   }
+    font-size: 18px;
+    line-height: 1.2;
 }
 
-   @media (max-width: 600px) {
-
-    html {
-    font-size: 12px;
-    
-  }
-
+ @media (max-width: 600px) {
+     html {
+         font-size: 14px;
      }
-   
+ }
+
+ @media (max-width: 420px) {
+    html {
+        font-size: 12px;
+    }
+}
+ 
  body {
-    
      font-family: 'Montserrat', sans-serif;
      text-transform: uppercase;
      text-align: center;
  }
- header{
-     height: 100vh;
-position: relative;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
-}
 
-#hero{
+ header {
+     position: relative;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     box-shadow: 0 0 3rem rgba(0, 0, 0, 0.8);
+ }
+
+ #hero {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
- 
-}
+ }
 
-header div {
-    position: relative;
-    color: #fff;
-    padding-bottom: 2rem;
-}
-header h1 {
-    font-size: 3.2rem;
-    letter-spacing: -1px;
-    font-weight: 900;
-    white-space: nowrap;  
-}
-header p {
-    font-size: 1.4rem;
-}
-section{
-    padding: 6rem 1rem;
+ header div {
+     position: relative;
+     color: #fff;
+     padding-bottom: 2rem;
+ }
 
-}
+ header h1 {
+     font-size: 3.2rem;
+     letter-spacing: -1px;
+     font-weight: 900;
+     white-space: nowrap;
+ }
 
-#intro {
-    background-image: linear-gradient(to right bottom, #261c5c , #8566ff);
-color: #fff;
+ header p {
+     font-size: 1.4rem;
+ }
 
-}
-#intro p {
-    font-weight: 800;
-    font-size: 3rem;
-    margin: 0.5rem;
-    text-shadow: 0 0 8px rgba(0, 0, 16px, 0.5);
-}
-@media(max-width: 1000px){
+ section {
+     padding: 6rem 1rem;
+ }
+
+ #intro {
+     background-image: linear-gradient(to right bottom, #261C5C, #8566FF);
+     color: #fff;
+ }
+
+ #intro p {
+     font-weight: 800;
+     font-size: 3rem;
+     margin: 0.5rem;
+     text-shadow: 0 0 8px rgba(0, 0, 16px, 0.5);
+ }
+
+ @media (max-width: 1000px) {
     #intro p {
         font-size: 2.6rem;
     }
-}
-.button {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 1.6rem 2.2rem;
-    margin: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 400;
-transition: transform 0.3s;
-}
+ }
 
-.button:hover {
-    transform: scale(1.1);
-}
-#intro div{
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
-}
-@media(max-width: 600px){
+ .button {
+     display: inline-block;
+     color: #fff;
+     text-decoration: none;
+     border: 2px solid #fff;
+     padding: 1.6rem 2.2rem;
+     margin: 1.5rem;
+     font-size: 1.1rem;
+     font-weight: 400;
+     transition: transform 0.3s;
+ }
+
+ .button:hover {
+     transform: scale(1.1);
+ }
+
+ #intro div {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ @media (max-width: 420px) {
     #intro div {
         flex-direction: column;
     }
-}
-#intro svg {
-display: block;
-width: 8rem;
-height: auto;
-margin: 1.5rem;
-fill: transparent;
-stroke: #fff;
-stroke-width: 2;
+ }
 
-}
-#icon-kick circle:last-child {
-animation-name: kick;
-animation-duration: 500ms;
-animation-iteration-count: infinite;
-animation-timing-function: ease-out;
-}
+ #intro svg {
+     display: block;
+     width: 8rem;
+     height: auto;
+     margin: 1.5rem;
+     fill: transparent;
+     stroke: #fff;
+     stroke-width: 2;
+ }
 
-@keyframes kick {
-    
-    10% {
+ #icon-kick circle:last-child {
+    animation-name: kick;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+ }
+
+ @keyframes kick {
+     10% {
         r: 0;
+     }
+     100% {
+        r: 30;
+     }
+ }
 
-    }
+ #icon-knob line {
+    animation-name: knob;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: center;
+ }
 
-    100% {
-         r: 30;
-    }
-    
+ @keyframes knob {
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+#icon-equalizer line {
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    transform-box: fill-box;
+    transform-origin: center bottom;
 }
-
-#icon-equalizer line{
-animation-iteration-count: infinite;
-animation-timing-function: ease-out;
-animation-direction: alternate;
-transform-box: fill-box;
-transform-origin: bottom;
+#icon-equalizer line:nth-of-type(1) {
+    animation-name: eq1;
+    animation-duration: 400ms;
 }
-
-#icon-equalizer line:nth-of-type(1){
-animation-name: eq1;
-animation-duration: 400ms;
-}
-#icon-equalizer line:nth-of-type(2){
+#icon-equalizer line:nth-of-type(2) {
     animation-name: eq2;
-animation-duration: 800ms;
+    animation-duration: 800ms;
 }
-#icon-equalizer line:nth-of-type(3){
+#icon-equalizer line:nth-of-type(3) {
     animation-name: eq3;
-    animation-duration: 700ms;  
+    animation-duration: 700ms;     
 }
-#icon-equalizer line:nth-of-type(4){
+#icon-equalizer line:nth-of-type(4) {
     animation-name: eq4;
     animation-duration: 800ms; 
 }
-#icon-equalizer line:nth-of-type(5){
+#icon-equalizer line:nth-of-type(5) {
     animation-name: eq5;
-    animation-duration: 300ms;  
+    animation-duration: 300ms; 
 }
 
 @keyframes eq1 {
-    0%{ transform: scale(1 , 0.5);}
-    50%{ transform: scale(1 , 0.8);}
-    100%{ transform: scale(1 , 0.3);}
+    0%   { transform: scale(1, 0.5); }
+    50%  { transform: scale(1, 0.8); }
+    100% { transform: scale(1, 0.3); }
 }
-
 @keyframes eq2 {
-    0%{ transform: scale(1 , 1);}
-    50%{ transform: scale(1 , 1.1);}
-    100%{ transform: scale(1 , 0.7);}
+    0%   { transform: scale(1, 1);   }
+    50%  { transform: scale(1, 1.1); }
+    100% { transform: scale(1, 0.7); }
 }
-
 @keyframes eq3 {
-    0%{ transform: scale(1 , 1);}
-    50%{ transform: scale(1 , 1.4);}
-    100%{ transform: scale(1 , 0.6);}
+    0%   { transform: scale(1, 1);   }
+    50%  { transform: scale(1, 1.4); }
+    100% { transform: scale(1, 0.6); }
 }
-
 @keyframes eq4 {
-    0%{ transform: scale(1 , 1);}
-    50%{ transform: scale(1 , 1.4);}
-    100%{ transform: scale(1 , 0.6);}
+    0%   { transform: scale(1, 1);   }
+    50%  { transform: scale(1, 1.8); }
+    100% { transform: scale(1, 0.8); }
 }
-
 @keyframes eq5 {
-    0%{ transform: scale(1 , 1);}
-    50%{ transform: scale(1 , 1.1);}
-    100%{ transform: scale(1 , 0.7);}
+    0%   { transform: scale(1, 1);   }
+    50%  { transform: scale(1, 1.2); }
+    100% { transform: scale(1, 0.7); }
 }
 
-
-
-#icon-knob line {  
-animation-name: knob;
-animation-duration: 5s;
-animation-iteration-count: infinite;
-animation-timing-function: linear;
-transform-origin: center;
-}
-@keyframes knob {
-    100%{
-        transform: rotate(360deg);
-    }
-}
-h2{
+h2 {
     font-size: 1.6rem;
 }
+
 #lineup img {
     display: block;
     max-width: 340px;
     border-radius: 50%;
     margin: 6rem auto;
 }
+
 #lineup ul {
     list-style-type: none;
     font-size: 2.8rem;
@@ -234,17 +227,17 @@ h2{
     justify-content: center;
     line-height: 1.1;
     letter-spacing: -1px;
-max-width: 1400px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-@media(max-width:800px){
+@media (max-width: 800px) {
     #lineup ul {
         font-size: 2rem;
         flex-direction: column;
-
     }
-
 }
+
 #lineup li {
     padding: 0 0.5rem;
     font-weight: 800;
@@ -252,19 +245,23 @@ max-width: 1400px;
     transition: background-color 6s ease-out;
 }
 
-#lineup li:hover{
+#lineup li:hover {
     transition: background-color 0.1s;
 }
 
-#lineup li:nth-child(even){
-font-weight: 400;
-
+#lineup li:nth-child(even) {
+    font-weight: 400;
 }
 
 #map {
     height: 100vh;
 }
-#map img {
+
+#marker {
+    color: #fff;
+}
+
+#marker img {
     display: block;
     width: 60px;
     animation-name: marker;
